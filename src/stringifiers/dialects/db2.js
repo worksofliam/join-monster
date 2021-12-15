@@ -1,16 +1,16 @@
-import {
+const {
   keysetPagingSelect,
   offsetPagingSelect,
   interpretForOffsetPaging,
   interpretForKeysetPaging,
   generateCastExpressionFromValueType
-} from '../shared'
+} = require('../shared')
 
 const dialect = (module.exports = {
-  name: 'pg',
+  name: 'db2',
 
   quote(str) {
-    return `'${str}'`
+    return `"${str}"`
   },
 
   compositeKey(parent, keys) {
